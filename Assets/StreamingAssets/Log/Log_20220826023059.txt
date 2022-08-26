@@ -1,0 +1,51 @@
+frame=   46 fps= 45 q=0.0 size=       0kB time=00:00:01.77 bitrate=   0.2kbits/s speed=1.75x    
+當前轉檔影片長度：170
+frame=   61 fps= 40 q=44.0 size=       0kB time=00:00:02.26 bitrate=   0.2kbits/s speed=1.48x    
+當前轉檔影片長度：220
+frame=   75 fps= 35 q=44.0 size=       0kB time=00:00:02.73 bitrate=   0.1kbits/s speed=1.26x    
+當前轉檔影片長度：270
+frame=   89 fps= 33 q=46.0 size=       0kB time=00:00:03.17 bitrate=   0.1kbits/s speed=1.19x    
+當前轉檔影片長度：310
+frame=  102 fps= 32 q=46.0 size=       0kB time=00:00:03.62 bitrate=   0.1kbits/s speed=1.13x    
+當前轉檔影片長度：360
+frame=  114 fps= 31 q=47.0 size=     256kB time=00:00:04.03 bitrate= 520.2kbits/s speed=1.08x    
+當前轉檔影片長度：400
+frame=  127 fps= 30 q=47.0 size=     256kB time=00:00:04.45 bitrate= 470.4kbits/s speed=1.05x    
+當前轉檔影片長度：440
+frame=  140 fps= 29 q=48.0 size=     256kB time=00:00:04.90 bitrate= 427.5kbits/s speed=1.03x    
+當前轉檔影片長度：490
+frame=  153 fps= 29 q=47.0 size=     512kB time=00:00:05.33 bitrate= 786.5kbits/s speed=1.01x    
+當前轉檔影片長度：530
+frame=  166 fps= 29 q=47.0 size=     512kB time=00:00:05.78 bitrate= 725.6kbits/s speed=0.996x    
+當前轉檔影片長度：570
+frame=  177 fps= 24 q=-1.0 Lsize=     858kB time=00:00:05.86 bitrate=1197.9kbits/s speed=0.786x    
+當前轉檔影片長度：580
+video:759kB audio:92kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.835304%
+[libx264 @ 0x7ff04f40b680] frame I:12    Avg QP:36.29  size:  8697
+[libx264 @ 0x7ff04f40b680] frame P:111   Avg QP:40.42  size:  5212
+[libx264 @ 0x7ff04f40b680] frame B:54    Avg QP:43.66  size:  1735
+[libx264 @ 0x7ff04f40b680] consecutive B-frames: 50.3% 20.3% 20.3%  9.0%
+[libx264 @ 0x7ff04f40b680] mb I  I16..4: 36.3% 63.7%  0.0%
+[libx264 @ 0x7ff04f40b680] mb P  I16..4: 20.3% 41.8%  0.0%  P16..4:  5.0%  0.1%  0.0%  0.0%  0.0%    skip:32.7%
+[libx264 @ 0x7ff04f40b680] mb B  I16..4:  0.5%  0.6%  0.0%  B16..8: 15.3%  0.2%  0.0%  direct: 0.1%  skip:83.1%  L0:42.7% L1:56.7% BI: 0.7%
+[libx264 @ 0x7ff04f40b680] final ratefactor: 40.18
+[libx264 @ 0x7ff04f40b680] 8x8 transform intra:66.6% inter:99.7%
+[libx264 @ 0x7ff04f40b680] coded y,uvDC,uvAC intra: 3.5% 15.3% 0.0% inter: 0.5% 0.8% 0.0%
+[libx264 @ 0x7ff04f40b680] i16 v,h,dc,p: 20% 52%  7% 21%
+[libx264 @ 0x7ff04f40b680] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 18% 55%  0%  1%  0%  1%  0%  0%
+[libx264 @ 0x7ff04f40b680] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 36% 12%  4%  4%  6%  4%  2%  2%
+[libx264 @ 0x7ff04f40b680] i8c dc,h,v,p: 94%  4%  2%  0%
+[libx264 @ 0x7ff04f40b680] Weighted P-Frames: Y:9.0% UV:2.7%
+[libx264 @ 0x7ff04f40b680] ref P L0: 69.9%  6.2% 16.9%  6.4%  0.6%
+[libx264 @ 0x7ff04f40b680] ref B L0: 85.3% 13.6%  1.1%
+[libx264 @ 0x7ff04f40b680] ref B L1: 99.2%  0.8%
+[libx264 @ 0x7ff04f40b680] kb/s:1050.03
+[aac @ 0x7ff04f40cac0] Qavg: 185.811
+執行結束
+PC_returnCode:0
+我有釋放資源
+CompleteCallBackActions.count:1
+有執行complete
+CompleteCallBack
+轉檔成功
+清理complete
