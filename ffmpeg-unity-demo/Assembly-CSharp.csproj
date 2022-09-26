@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D3B37E4E-9DC6-5952-B813-1B10EB201B9D}</ProjectGuid>
+    <ProjectGuid>{C11778B0-A19C-87D2-807A-742ADA2EC025}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -68,8 +68,8 @@
     <Compile Include="Assets\Script\LoadingController.cs" />
     <Compile Include="Assets\Script\LogManager.cs" />
     <Compile Include="Assets\Script\Loom.cs" />
-    <None Include="Assets\StreamingAssets\Log\Log_20220831102022.txt" />
-    <None Include="Assets\StreamingAssets\Log\Log_20220831102208.txt" />
+    <None Include="Assets\StreamingAssets\Log\Log_20220922095801.txt" />
+    <None Include="Assets\StreamingAssets\Log\Log_20220922095744.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.15f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -254,7 +254,7 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.15f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="FileBrowserWin">
-      <HintPath>/Users/mac/dev-ffmpeg/Assets/Plugins/crosstales/FileBrowser/Native/Windows/FileBrowserWin.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Assets/Plugins/crosstales/FileBrowser/Native/Windows/FileBrowserWin.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.15f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -617,44 +617,44 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.15f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/mac/dev-ffmpeg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/mac/dev-ffmpeg/ffmpeg-unity-demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{CE5E62E4-38EF-A5D4-2AD6-994C642C0827}</Project>
+      <Project>{FBB52304-70D8-8901-1DCC-7036D940C6DB}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="NativeGallery.Editor.csproj">
-      <Project>{2D6A575B-07F9-BF23-AA57-691A8BB1AA9E}</Project>
+      <Project>{A5108BF0-4827-536E-6BCE-4D8CAEDA6DFE}</Project>
       <Name>NativeGallery.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NativeGallery.Runtime.csproj">
-      <Project>{E7441C75-679F-B057-A2E2-3E9807F0AFCB}</Project>
+      <Project>{D7A10CA5-79E6-C739-295D-33B8610CB530}</Project>
       <Name>NativeGallery.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
