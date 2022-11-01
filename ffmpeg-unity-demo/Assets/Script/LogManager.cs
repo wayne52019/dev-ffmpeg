@@ -35,8 +35,8 @@ public class LogManager
             }
         }
         logFilePath = logFolderPath + "Log_" + DateTime.Now.ToString("yyyyMMddhhmmss") + ".txt";
-        File.Create(logFilePath);
-
+        var st = File.Create(logFilePath);
+        st.Close();
     }
 
 

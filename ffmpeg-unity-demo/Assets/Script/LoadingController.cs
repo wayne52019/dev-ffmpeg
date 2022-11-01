@@ -35,6 +35,8 @@ public class LoadingController : MonoBehaviour
             Destroy(LoadingObj);
             Destroy(this);
         }
+
+        CancelBtn.onClick.AddListener(() => AR2VR.FFmpegManager.Instance.CallCancel());
     }
 
     public IEnumerator TurnRun()
