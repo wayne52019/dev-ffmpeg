@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 using Crosstales.FB;
 using AR2VR;
 
@@ -28,6 +29,22 @@ public class CircuitManager : MonoBehaviour
 
     string Resolution = "1280x720";
 
+    string videoDataRate = "1000K";
+
+    public InputField videoDataRateInputField;
+
+    public string DefaultDataRate = "1000K";
+
+    public InputField resolutionWidthInputField;
+
+    public string DefultResolutionWidth = "1280";
+
+    public InputField resolutionHeightInputField;
+
+    public string DefultResolutionHeight = "720";
+
+    string aspect;
+
     float time;
 
     bool canUpdate;
@@ -44,6 +61,14 @@ public class CircuitManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(updateTime());
+
+        videoDataRateInputField.text = DefaultDataRate;
+
+        resolutionWidthInputField.text = DefultResolutionWidth;
+
+        resolutionHeightInputField.text = DefultResolutionHeight;
+
+        aspect = (float.Parse(DefultResolutionWidth) / float.Parse(DefultResolutionHeight)).ToString();
     }
 
 #if (UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR
@@ -81,11 +106,39 @@ public class CircuitManager : MonoBehaviour
     /// <summary>
     /// 選取影片
     /// </summary>
-    public void getVideo(string resolution)
+    public void getVideo()
     {
         selectType = Type.video;
 
-        Resolution = resolution;
+#if UNITY_STANDALONE || UNITY_EDITOR
+        getCallBack(FileBrowser.OpenSingleFile("Open single file", Application.streamingAssetsPath + "/", new ExtensionFilter("Video Files", "mp4", "mov")));
+#else
+        NativeGallery.GetVideoFromGallery((p)=> getCallBack(p));
+#endif
+    }
+
+    /// <summary>
+    /// 選取影片
+    /// </summary>
+    public void getVideo2()
+    {
+        selectType = Type.video;
+
+        if (string.IsNullOrEmpty(resolutionWidthInputField.text))
+            resolutionWidthInputField.text = DefultResolutionWidth;
+
+        videoDataRate = videoDataRateInputField.text +"K";
+
+        if (string.IsNullOrEmpty(resolutionHeightInputField.text))
+            resolutionWidthInputField.text = DefultResolutionHeight;
+
+        if (string.IsNullOrEmpty(videoDataRateInputField.text))
+            videoDataRateInputField.text = DefaultDataRate;
+
+        Resolution = resolutionWidthInputField.text + "x" + resolutionHeightInputField.text;
+
+        aspect = (float.Parse(resolutionWidthInputField.text) /
+            float.Parse(resolutionHeightInputField.text)).ToString();
 
 #if UNITY_STANDALONE || UNITY_EDITOR
         getCallBack(FileBrowser.OpenSingleFile("Open single file", Application.streamingAssetsPath + "/", new ExtensionFilter("Video Files", "mp4", "mov")));
@@ -181,7 +234,11 @@ public class CircuitManager : MonoBehaviour
             FileName = inputFileName + " " + Resolution + " -new.mp4";
             //設定輸出路徑
 #if UNITY_STANDALONE || UNITY_EDITOR
-            OutputPath = Application.streamingAssetsPath + "/" + FileName;
+            if(!Directory.Exists(Application.streamingAssetsPath + "/Video/" + inputFileName))
+            {
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Video/" + inputFileName);
+            }
+            OutputPath = Application.streamingAssetsPath + "/Video/" + inputFileName + "/" + FileName;
 #else
             OutputPath = Application.persistentDataPath + "/" + FileName;
             //取得影片時間
@@ -190,9 +247,9 @@ public class CircuitManager : MonoBehaviour
 #endif
 
 #if UNITY_STANDALONE_WIN
-            cmd = "-i " + "\"" + path + "\"" + " -r 5 -ar 32000 -b:v 1000k -y -c:v h264 -s " + Resolution + " \"" + OutputPath + "\"";
+            cmd = "-i " + "\"" + path + "\"" + " -aspect " + aspect + " -b:v "+ videoDataRate + " -y -c:v h264 -s " + Resolution + " \"" + OutputPath + "\"";
 #else
-            cmd = "-i " + "\"" + path + "\"" + " -r 5 -ar 32000 -b 1000k -y -c:v h264 -s " + Resolution + " \"" + OutputPath + "\"";
+            cmd = "-i " + "\"" + path + "\"" + " -aspect " + aspect + " -b " + videoDataRate + " -y -c:v h264 -s " + Resolution + " \"" + OutputPath + "\"";
 #endif
 
             FFmpegManager.Instance.EncodeProgressUpdateEvent = ((p) =>
@@ -216,9 +273,9 @@ public class CircuitManager : MonoBehaviour
             }
             //設定輸出路徑
 #if UNITY_STANDALONE
-            OutputPath = Application.streamingAssetsPath + "/" + FileName;
+            OutputPath = Application.streamingAssetsPath + FileName;
 #else
-            OutputPath = Application.persistentDataPath + "/" + FileName;
+            OutputPath = Application.persistentDataPath + FileName;
             //取得影片時間
             var properties = NativeGallery.GetVideoProperties(path);
             duration = properties.duration.ToString();
@@ -253,6 +310,19 @@ public class CircuitManager : MonoBehaviour
               else
                   print("轉檔時間：" + time);
           };
+
+#if UNITY_STANDALONE
+        FFmpegManager.Instance.SuccessEvent = (p) =>
+        {
+            if (selectType == Type.video)
+                System.Diagnostics.Process.Start(@Application.streamingAssetsPath + "/Video/" + inputFileName);
+        };
+
+        FFmpegManager.Instance.FailEvent = () =>
+        {
+            System.Diagnostics.Process.Start(@LogManager.GetNowLogFile());
+        };
+#endif
 
         FFmpegManager.Instance.StartEncodeEvent = () =>
           {

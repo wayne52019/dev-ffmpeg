@@ -64,4 +64,9 @@ public class LogManager
             Console.WriteLine("Executing finally block.");
         }
     }
+
+    public static string GetNowLogFile()
+    {
+        return logFilePath;
+    }
 }
