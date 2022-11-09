@@ -8,7 +8,7 @@
 
 ### (由於這些檔案過大，無法上傳Git，所以要另外下載)
 
-[請下載該檔案](https://drive.google.com/file/d/1lV8jeOxysPjsdYNZ13zfa6yoxkHkAgmW/view?usp=sharing)
+[請下載該檔案](https://drive.google.com/file/d/1gpBNCh5SSmvOG-xepBPcVMPUXhBCW7A8/view?usp=share_link)
 
 (1)把當中的"ffmpeg 3"、"ffmpeg.exe"放入專案中的"StreamingAssets"資料夾。
 
