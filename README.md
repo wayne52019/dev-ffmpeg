@@ -2,8 +2,6 @@
 
 ## [說明文件](https://docs.google.com/document/d/1NxAfbNt49OfiS8GtWJAjqKdPPLfFNeiz/edit)
 
-## [Trello](https://trello.com/c/Qt1MTtbu)
-
 ## Unity FFmpeg依賴
 
 ### (由於這些檔案過大，無法上傳Git，所以要另外下載)
